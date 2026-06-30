@@ -1,0 +1,32 @@
+7-Zip ライセンス情報（Karuzip 同梱コンポーネント）
+================================================================
+
+Karuzip は、圧縮・解凍エンジンとして 7-Zip のコマンドライン版
+（7z.exe / 7z.dll）を「改変せず」同梱し、独立したプロセスとして
+呼び出しています。
+
+同梱バージョン: 7-Zip 25.01（2025-08-03 リリース、x64）
+Copyright (C) 1999-2025 Igor Pavlov.
+
+ライセンス構成（公式 License.txt の通り）:
+  - 大部分: GNU LGPL (Lesser General Public License)
+  - 一部:   GNU LGPL ＋ unRAR ライセンス制限（RAR 復号コード）
+  - 一部:   BSD 3-clause License（LZFSE / ZSTD 復号）
+  - 一部:   BSD 2-clause License（XXH64）
+  - unRAR:  RAR アーカイブの「作成」への利用を禁止
+            （Karuzip は RAR の解凍のみに対応し、作成機能は提供しません）
+
+【公式ライセンス全文】
+7-Zip 公式 License.txt の全文を、同じ licenses/ フォルダ内の
+「7-Zip-License.txt」として逐語同梱しています（インストール先にも配置）。
+本ファイルはその日本語による補足説明です。
+
+【ソースコードの入手（LGPL written offer）】
+同梱した 7-Zip 25.01 に対応する完全なソースコードおよびライセンス全文は、
+以下から入手できます:
+
+    バージョン一覧・ソース: https://www.7-zip.org/download.html
+    25.01 ソース書庫:        https://www.7-zip.org/a/7z2501-src.7z
+
+※ 7-Zip の新版が出てもトップページのリンク先が変わるため、上記のように
+   同梱版（25.01）に対応するバージョン番号とソース書庫を明示しています。
