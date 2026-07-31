@@ -1,0 +1,45 @@
+unar / lsar ライセンス・ソース情報（Karuzip 同梱コンポーネント）
+====================================================================
+
+Karuzip は Windows 版 unar 1.8.1 の unar.exe / lsar.exe を改変せず同梱し、
+独立した子プロセスとして読み込み・解凍に使用します。書庫作成には使用しません。
+
+対象バイナリ:
+  unar.exe  1.8.1
+  lsar.exe  1.8.1
+
+Copyright (C) Dag Ågren and The Unarchiver contributors.
+The Unarchiver / XADMaster project is maintained by MacPaw.
+
+ライセンス:
+  GNU Lesser General Public License version 2.1 or later
+  LGPL-2.1 の全文は同梱の unar-LGPL-2.1.txt を参照してください。
+
+公式 Windows バイナリ入手先:
+  https://cdn.theunarchiver.com/downloads/unarWindows.zip
+  SHA-256: 61a6b299606282f72f51c278801eac11d3dccfac83e2d68bccce33539912e0dd
+
+同梱版 1.8.1 に対応するソース:
+  XADMaster commit:
+    42b4701a9a51cc1e53d53b1ac2f5042995fbda8a
+    https://github.com/MacPaw/XADMaster/commit/42b4701a9a51cc1e53d53b1ac2f5042995fbda8a
+  universal-detector commit:
+    40d7ec6d2a99881f23a5050c03715ae4f03dba87
+    https://github.com/MacPaw/universal-detector/commit/40d7ec6d2a99881f23a5050c03715ae4f03dba87
+
+版対応の根拠:
+  XADMaster の上記 commit は 2013-10-02 の「Bump versions」で、unar.m の
+  VERSION_STRING を v1.8.1 としています。universal-detector の上記 commit は
+  同日の Windows build 修正であり、公式な commit 間対応表が存在しないため、
+  評価時点で最も蓋然性の高い対応点として記録します。
+
+恒久保管したソーススナップショット:
+  source/XADMaster-42b4701a9a51cc1e53d53b1ac2f5042995fbda8a.tar.gz
+    SHA-256: 9dab7f6065803381b405c3b0a9be061e6a661dc0924127e4c8ebb32e6f1c21ab
+  source/universal-detector-40d7ec6d2a99881f23a5050c03715ae4f03dba87.tar.gz
+    SHA-256: 9e094831687eb9c7007cd496530fba0baf3804cca25f7ac138f828750cefa630
+
+注意:
+  公式 CDN の TheUnarchiverSource.zip は v1.10.1（2016）であり、同梱した
+  Windows バイナリ 1.8.1 と一致しないため、本バイナリの対応ソースには用いません。
+
