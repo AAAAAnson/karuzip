@@ -2,7 +2,7 @@
 
 **軽い・安心・広告なしの解凍/圧縮ソフト（Windows）**
 
-Karuzip は、ZIP・7z・RAR などをドラッグ＆ドロップや右クリックでかんたんに解凍／圧縮できる、日本語対応の無料 Windows アプリです。広告・バンドルソフト・テレメトリは一切ありません。
+Karuzip は、ZIP・7z・RAR などをドラッグ＆ドロップや右クリックでかんたんに解凍／圧縮できる無料の Windows アプリです（日本語・英語）。広告・バンドルソフト・テレメトリは一切ありません。
 
 **公式サイト: https://karuzip.com**
 
@@ -10,13 +10,13 @@ Karuzip は、ZIP・7z・RAR などをドラッグ＆ドロップや右クリッ
 
 ## ダウンロード
 
-**→ [最新版をダウンロード](https://github.com/AAAAAnson/karuzip/releases/latest)**（現在 v1.3.0）
+**→ [最新版をダウンロード](https://github.com/AAAAAnson/karuzip/releases/latest)**（現在 v1.4.5）
 
 - 公式サイトから: https://karuzip.com/download/Karuzip-Setup.exe （常に最新版）
 - **Microsoft Store 版**: https://apps.microsoft.com/detail/9N9KD93CM84T
   （Microsoft の署名が付くため **SmartScreen の警告が出ません**。Windows 11 向け）
 
-対応: Windows 11 / 10（64bit）／ サイズ: 約 7.4 MB
+対応: Windows 11 / 10（64bit）／ サイズ: 約 9.3 MB
 
 ### 初回起動時の警告について（SmartScreen）
 
@@ -26,11 +26,11 @@ Karuzip は、ZIP・7z・RAR などをドラッグ＆ドロップや右クリッ
 
 くわしい解説: https://karuzip.com/smartscreen.html
 
-ご不安な場合は、配布ファイルの SHA-256 ハッシュをご確認ください（v1.3.0 は各リリースページにも記載しています）:
+ご不安な場合は、配布ファイルの SHA-256 ハッシュをご確認ください（各リリースページにも記載しています）:
 
 ```powershell
-Get-FileHash .\Karuzip_1.3.0_x64-setup.exe -Algorithm SHA256
-# 3091F7D826CC6D932662326315DDE3C24C7050F5B652924FD8D65A42C43FA751
+Get-FileHash .\Karuzip_1.4.5_x64-setup.exe -Algorithm SHA256
+# F3AE88C5C073EB8B0386DAD070D5068B42E5F402510C1DEDE113386034DC5EE3
 ```
 
 ## 特長
@@ -41,10 +41,11 @@ Get-FileHash .\Karuzip_1.3.0_x64-setup.exe -Algorithm SHA256
 - パスワード付き（暗号化）書庫の解凍と作成に対応（7z はファイル名も暗号化）
 - **日本語ファイル名の文字化けに対応**。文字コードを手動で切り替えることもできます（自動 / UTF-8 / CP932 / GBK / Big5）
 - 分割書庫（`.zip.001` / `.part1.rar` など）の解凍と作成に対応
-- 右クリックメニューから直接「ここに解凍」「Karuzip で圧縮」（Windows 11 の Store 版は一次メニューに 6 項目）
+- 右クリックメニューから直接「ここに解凍」「Karuzip で圧縮」（Windows 11 の Store 版は一次メニューの `Karuzip` サブメニューに 8 項目）
 - 大きな書庫でも件数つきの進捗表示、必要なファイルだけを選んで解凍することも可能
-- 書庫の中身を解凍せずに一覧・検索、破損チェック（テスト）
+- 書庫の中身を解凍せずに一覧・検索、「破損をチェック」で書庫の壊れを確認
 - 自動更新に対応（v1.0.2 以降）
+- **日本語と英語に対応**（設定で切り替え。右クリックメニューとファイル種別名も追従します。v1.4.5 以降）
 - 広告・バンドルソフトなし、個人情報の収集・送信なし
 
 ## ドキュメント
