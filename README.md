@@ -10,7 +10,7 @@ Karuzip は、ZIP・7z・RAR などをドラッグ＆ドロップや右クリッ
 
 ## ダウンロード
 
-**→ [最新版をダウンロード](https://github.com/AAAAAnson/karuzip/releases/latest)**（現在 v1.4.5）
+**→ [最新版をダウンロード](https://github.com/AAAAAnson/karuzip/releases/latest)**（現在 v2.0.0）
 
 - 公式サイトから: https://karuzip.com/download/Karuzip-Setup.exe （常に最新版）
 - **Microsoft Store 版**: https://apps.microsoft.com/detail/9N9KD93CM84T
@@ -29,7 +29,7 @@ Karuzip は、ZIP・7z・RAR などをドラッグ＆ドロップや右クリッ
 ご不安な場合は、配布ファイルの SHA-256 ハッシュをご確認ください（各リリースページにも記載しています）:
 
 ```powershell
-Get-FileHash .\Karuzip_1.4.5_x64-setup.exe -Algorithm SHA256
+Get-FileHash .\Karuzip_2.0.0_x64-setup.exe -Algorithm SHA256
 # F3AE88C5C073EB8B0386DAD070D5068B42E5F402510C1DEDE113386034DC5EE3
 ```
 
