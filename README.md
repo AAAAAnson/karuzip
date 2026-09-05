@@ -10,13 +10,13 @@ Karuzip は、ZIP・7z・RAR などをドラッグ＆ドロップや右クリッ
 
 ## ダウンロード
 
-**→ [最新版をダウンロード](https://github.com/AAAAAnson/karuzip/releases/latest)**（現在 v2.0.0）
+**→ [最新版をダウンロード](https://github.com/AAAAAnson/karuzip/releases/latest)**（公式サイト・GitHub 配布版 v2.2.1）
 
 - 公式サイトから: https://karuzip.com/download/Karuzip-Setup.exe （常に最新版）
 - **Microsoft Store 版**: https://apps.microsoft.com/detail/9N9KD93CM84T
-  （Microsoft の署名が付くため **SmartScreen の警告が出ません**。Windows 11 向け）
+  （Microsoft の署名が付くため **SmartScreen の警告が出ません**。Windows 11 向け。更新の配信時期は公式サイト版と異なるため、ストアの掲載情報をご確認ください）
 
-対応: Windows 11 / 10（64bit）／ サイズ: 約 9.3 MB
+対応: Windows 11 / 10（64bit）／ 公式サイト・GitHub インストーラ: 11.77 MB（11,771,085 bytes）
 
 ### 初回起動時の警告について（SmartScreen）
 
@@ -29,9 +29,11 @@ Karuzip は、ZIP・7z・RAR などをドラッグ＆ドロップや右クリッ
 ご不安な場合は、配布ファイルの SHA-256 ハッシュをご確認ください（各リリースページにも記載しています）:
 
 ```powershell
-Get-FileHash .\Karuzip_2.0.0_x64-setup.exe -Algorithm SHA256
-# F3AE88C5C073EB8B0386DAD070D5068B42E5F402510C1DEDE113386034DC5EE3
+Get-FileHash .\Karuzip_2.2.1_x64-setup.exe -Algorithm SHA256
+# 66F13F8BF9DDEABF628743D4DB05AD4D7B75B7C5269072E3811837898A7E12BD
 ```
+
+v2.2.1 は不具合修正の更新です。通常の Windows パスやネットワーク共有（UNC）を監視対象にしたときに自動処理が始まらない問題と、パス形式による権限確認の不一致で破損した書庫を隔離できない問題を修正しました。
 
 ## 特長
 
@@ -40,11 +42,12 @@ Get-FileHash .\Karuzip_2.0.0_x64-setup.exe -Algorithm SHA256
 - 圧縮は ZIP・7z・tar・gz ほかに対応（**RAR の作成は行いません**。下記ライセンス参照）
 - パスワード付き（暗号化）書庫の解凍と作成に対応（7z はファイル名も暗号化）
 - **日本語ファイル名の文字化けに対応**。文字コードを手動で切り替えることもできます（自動 / UTF-8 / CP932 / GBK / Big5）
-- 分割書庫（`.zip.001` / `.part1.rar` など）の解凍と作成に対応
-- 右クリックメニューから直接「ここに解凍」「Karuzip で圧縮」（Windows 11 の Store 版は一次メニューの `Karuzip` サブメニューに 8 項目）
+- 分割書庫（`.zip.001` / `.part1.rar` など）の解凍と、ZIP・7z の分割書庫作成に対応
+- 右クリックで「ここに解凍」「フォルダーに解凍」「中身を見る」や圧縮操作を選択（Windows 11 の Store 版は最初のメニューの `Karuzip` から操作。書庫だけを選んだときは圧縮項目を表示しません）
 - 大きな書庫でも件数つきの進捗表示、必要なファイルだけを選んで解凍することも可能
 - 書庫の中身を解凍せずに一覧・検索、「破損をチェック」で書庫の壊れを確認
-- 自動更新に対応（v1.0.2 以降）
+- 監視フォルダーの自動処理、解凍前チェック、検索できる処理記録に対応（自動処理は Karuzip を起動している間だけ動作します）
+- 自動更新に対応（公式サイト版 v1.4.1 以降。v1.4.0 以前からは一度だけ手動更新が必要です。Store 版は Microsoft Store が更新します）
 - **日本語と英語に対応**（設定で切り替え。右クリックメニューとファイル種別名も追従します。v1.4.5 以降）
 - 広告・バンドルソフトなし、個人情報の収集・送信なし
 
