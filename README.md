@@ -10,13 +10,13 @@ Karuzip は、ZIP・7z・RAR などをドラッグ＆ドロップや右クリッ
 
 ## ダウンロード
 
-**→ [最新版をダウンロード](https://github.com/AAAAAnson/karuzip/releases/latest)**（公式サイト・GitHub 配布版 v2.2.6）
+**→ [最新版をダウンロード](https://github.com/AAAAAnson/karuzip/releases/latest)**（公式サイト・GitHub 配布版 v2.2.7）
 
 - 公式サイトから: https://karuzip.com/download/Karuzip-Setup.exe （常に最新版）
 - **Microsoft Store 版**: https://apps.microsoft.com/detail/9N9KD93CM84T
   （Microsoft の署名が付くため **SmartScreen の警告が出ません**。Windows 11 向け。更新の配信時期は公式サイト版と異なるため、ストアの掲載情報をご確認ください）
 
-対応: Windows 11 / 10（64bit）／ 公式サイト・GitHub インストーラ: 12.44 MB（12,442,492 bytes）
+対応: Windows 11 / 10（64bit）／ 公式サイト・GitHub インストーラ: 12.55 MB（12,545,114 bytes）
 
 ### 初回起動時の警告について（SmartScreen）
 
@@ -29,8 +29,8 @@ Karuzip は、ZIP・7z・RAR などをドラッグ＆ドロップや右クリッ
 ご不安な場合は、配布ファイルの SHA-256 ハッシュをご確認ください（各リリースページにも記載しています）:
 
 ```powershell
-Get-FileHash .\Karuzip_2.2.6_x64-setup.exe -Algorithm SHA256
-# 8768F979A35B2DFB1B1D1AF19A3D4960D370CE7B8959D4584BF497A708C57FEC
+Get-FileHash .\Karuzip_2.2.7_x64-setup.exe -Algorithm SHA256
+# E41585BED8A6751FB132B3367D9EC032A1CD3928309537E81C483363EEE5867D
 ```
 
 v2.2.6 では、アプリ内とファイル形式のアイコンを共通デザインに統一しました。書庫の警告表示、自動処理中の終了、ダイアログのキーボード操作、圧縮設定の説明、結果表示の言語切替を改善しました。
