@@ -2,21 +2,21 @@
 
 **軽い・安心・広告なしの解凍/圧縮ソフト（Windows）**
 
-Karuzip は、ZIP・7z・RAR などをドラッグ＆ドロップや右クリックでかんたんに解凍／圧縮できる無料の Windows アプリです（日本語・英語）。広告・バンドルソフト・テレメトリは一切ありません。
+Karuzip は、ZIP・7z・RAR などをドラッグ＆ドロップや右クリックでかんたんに解凍／圧縮できる無料の Windows アプリです（日本語・英語・韓国語）。広告・バンドルソフト・テレメトリは一切ありません。
 
-**公式サイト: https://karuzip.com**
+**公式サイト: https://karuzip.com**（[English](https://karuzip.com/en/) / [한국어](https://karuzip.com/ko/)）
 
 > このリポジトリは Karuzip の**配布専用**です（インストーラの公開・更新履歴・不具合報告のため）。アプリ本体のソースコードは含みません。
 
 ## ダウンロード
 
-**→ [最新版をダウンロード](https://github.com/AAAAAnson/karuzip/releases/latest)**（公式サイト・GitHub 配布版 v2.2.9）
+**→ [最新版をダウンロード](https://github.com/AAAAAnson/karuzip/releases/latest)**（公式サイト・GitHub 配布版 v3.0.0）
 
 - 公式サイトから: https://karuzip.com/download/Karuzip-Setup.exe （常に最新版）
 - **Microsoft Store 版**: https://apps.microsoft.com/detail/9N9KD93CM84T
   （Microsoft の署名が付くため **SmartScreen の警告が出ません**。Windows 11 向け。更新の配信時期は公式サイト版と異なるため、ストアの掲載情報をご確認ください）
 
-対応: Windows 11 / 10（64bit）／ 公式サイト・GitHub インストーラ: 12.52 MB（12,515,147 bytes）
+対応: Windows 11 / 10（64bit）／ 公式サイト・GitHub インストーラ: 14.71 MB（15,423,491 bytes）
 
 ### 初回起動時の警告について（SmartScreen）
 
@@ -29,41 +29,42 @@ Karuzip は、ZIP・7z・RAR などをドラッグ＆ドロップや右クリッ
 ご不安な場合は、配布ファイルの SHA-256 ハッシュをご確認ください（各リリースページにも記載しています）:
 
 ```powershell
-Get-FileHash .\Karuzip_2.2.9_x64-setup.exe -Algorithm SHA256
-# 5991A5F03FDC98E7C44EBBABAE5E2AEA051FF509C00412CDF93DEC84E66D6EC9
+Get-FileHash .\Karuzip_3.0.0_x64-setup.exe -Algorithm SHA256
+# EFCE3B330BDF4C62EDA818957F41497B0E2F11F925AD903E8C4216D0485518F0
 ```
 
-v2.2.9 では、NAS・SMB の共有フォルダーで解凍が安全確認のエラーで止まる場合がある問題を修正しました。インターネット由来の印の引き継ぎ、ファイルやリンクの検証、既存データの保護を維持しています。自動更新の未使用 ZIP 読み取り依存を除外し、HTTPS・更新署名の検証を維持しています。
+v3.0.0 では、**韓国語（한국어）への正式対応**（アプリ画面・右クリックメニュー・インストーラー・韓国語 CP949 文字コード切替）、ローカル AI エージェント／CLI 連携（`karuzip-mcp` 21 ツール※現在公開中の Store 版 2.2 系には非同梱／`karuzip-cli` 13 アクション）、元ファイルを変更しない**「画像とPDF」ワークベンチ**とファイル収集、および **CAB・ISO の作成（計 9 形式）**を追加し、LZH 日本語ファイル名（CP932）の自動読み取り修正と NAS / SMB 解凍安全性修正も統合しました。
 
 ## 特長
 
 - ドラッグ＆ドロップでかんたんに解凍・圧縮
-- **解凍は 320 種類の拡張子に対応**（うち動作検証済み 230 種類、実機ファイルでの検証済み 12 種類）。ZIP・7z・RAR・tar・gz ほか
-- 圧縮は ZIP・7z・tar・gz ほかに対応（**RAR の作成は行いません**。下記ライセンス参照）
-- パスワード付き（暗号化）書庫の解凍と作成に対応（7z はファイル名も暗号化）
-- **日本語ファイル名の文字化けに対応**。文字コードを手動で切り替えることもできます（自動 / UTF-8 / CP932 / GBK / Big5）
+- **解凍は 320 種類の拡張子に対応**（うち動作検証済み 230 種類、実機ファイルでの検証済み 12 種類）。ZIP・7z・RAR・tar・gz・LZH ほか
+- **圧縮は ZIP・7z・TAR・GZIP・BZIP2・XZ・WIM・CAB・ISO の 9 形式に対応**（**RAR の作成は行いません**。下記ライセンス参照）
+- パスワード付き（暗号化）書庫の解凍と作成に対応（AES-256。7z はファイル名も暗号化）
+- **文字化けしたファイル名の一覧確認・手動文字コード切替に対応**（自動 / UTF-8 / 韓国語 CP949 / 日本語 CP932 / 簡体字 GBK / 繁体字 Big5）
 - 分割書庫（`.zip.001` / `.part1.rar` など）の解凍と、ZIP・7z の分割書庫作成に対応
 - 右クリックで「ここに解凍」「フォルダーに解凍」「中身を見る」や圧縮操作を選択（Windows 11 の Store 版は最初のメニューの `Karuzip` から操作。書庫だけを選んだときは圧縮項目を表示しません）
-- 大きな書庫でも件数つきの進捗表示、必要なファイルだけを選んで解凍することも可能
-- 書庫の中身を解凍せずに一覧・検索、「破損をチェック」で書庫の壊れを確認
+- 「画像とPDF」ワークベンチで、画像の一括変換・リサイズ・軽量化や PDF の結合・抽出・分割・並べ替え・軽量化を別ファイルとして保存
+- ローカル AI エージェント連携（`karuzip-mcp`・現在公開中の Store 2.2 版には非同梱）およびコマンドライン `karuzip-cli`（13 アクション）に対応
 - 監視フォルダーの自動処理、解凍前チェック、検索できる処理記録に対応（自動処理は Karuzip を起動している間だけ動作します）
 - 自動更新に対応（公式サイト版 v1.4.1 以降。v1.4.0 以前からは一度だけ手動更新が必要です。Store 版は Microsoft Store が更新します）
-- **日本語と英語に対応**（設定で切り替え。右クリックメニューとファイル種別名も追従します。v1.4.5 以降）
+- **日本語・英語・韓国語の 3 言語に対応**（設定で切り替え。右クリックメニューとファイル種別名も追従します）
 - 広告・バンドルソフトなし、個人情報の収集・送信なし
 
 ## ドキュメント
 
-- [使い方ガイド（実際の画面つき）](https://karuzip.com/tsukaikata.html)
+- [使い方ガイド（実際の画面つき）](https://karuzip.com/tsukaikata.html) ／ [User Guide (English)](https://karuzip.com/en/how-to-use-karuzip.html) ／ [사용 가이드 (한국어)](https://karuzip.com/ko/guide.html)
 - [更新履歴](https://karuzip.com/koushin-rireki.html)
+- [これまでの歩みと開発予定](https://karuzip.com/kaihatsu.html) ／ [Roadmap](https://karuzip.com/en/roadmap.html) ／ [개발 로드맵](https://karuzip.com/ko/roadmap.html)
+- [ローカル AI エージェント連携（MCP）](https://karuzip.com/ai-agent.html) ／ [CLI の使い方](https://karuzip.com/cli.html)
 - [安全性について](https://karuzip.com/anzen.html)
-- [ZIP の文字化けはなぜ起きるのか](https://karuzip.com/zip-mojibake.html)
 - [運営者情報・お問い合わせ](https://karuzip.com/operator.html)
 
 不具合のご報告・ご要望は、このリポジトリの [Issues](https://github.com/AAAAAnson/karuzip/issues) か support@karuzip.com までお願いします。
 
 ## プライバシー
 
-Karuzip は広告を表示せず、利用者の個人情報を収集・送信しません（アプリからの通信は自動更新の確認のみです）。
+Karuzip は広告を表示せず、利用者の個人情報を収集・送信しません（アプリからの通信は自動更新の確認と、利用者が明示的に送信ボタンを押した不具合報告のみです）。
 
 ## ライセンス
 
