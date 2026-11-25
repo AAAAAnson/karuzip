@@ -10,13 +10,13 @@ Karuzip は、ZIP・7z・RAR などをドラッグ＆ドロップや右クリッ
 
 ## ダウンロード
 
-**→ [最新版をダウンロード](https://github.com/AAAAAnson/karuzip/releases/latest)**（公式サイト・GitHub 配布版 v3.0.0）
+**→ [最新版をダウンロード](https://github.com/AAAAAnson/karuzip/releases/latest)**（公式サイト・GitHub 配布版 v3.1.0）
 
 - 公式サイトから: https://karuzip.com/download/Karuzip-Setup.exe （常に最新版）
 - **Microsoft Store 版**: https://apps.microsoft.com/detail/9N9KD93CM84T
   （Microsoft の署名が付くため **SmartScreen の警告が出ません**。Windows 11 向け。更新の配信時期は公式サイト版と異なるため、ストアの掲載情報をご確認ください）
 
-対応: Windows 11 / 10（64bit）／ 公式サイト・GitHub インストーラ: 14.71 MB（15,423,491 bytes）
+対応: Windows 11 / 10（64bit）／ 公式サイト・GitHub インストーラ: 14.85 MB（15,576,417 bytes）
 
 ### 初回起動時の警告について（SmartScreen）
 
@@ -29,11 +29,11 @@ Karuzip は、ZIP・7z・RAR などをドラッグ＆ドロップや右クリッ
 ご不安な場合は、配布ファイルの SHA-256 ハッシュをご確認ください（各リリースページにも記載しています）:
 
 ```powershell
-Get-FileHash .\Karuzip_3.0.0_x64-setup.exe -Algorithm SHA256
-# EFCE3B330BDF4C62EDA818957F41497B0E2F11F925AD903E8C4216D0485518F0
+Get-FileHash .\Karuzip_3.1.0_x64-setup.exe -Algorithm SHA256
+# 34343C9A6935F34C9B3ED78D19EA894A2396319B48270F0FB09CA2488081FA6A
 ```
 
-v3.0.0 では、**韓国語（한국어）への正式対応**（アプリ画面・右クリックメニュー・インストーラー・韓国語 CP949 文字コード切替）、ローカル AI エージェント／CLI 連携（`karuzip-mcp` 21 ツール※現在公開中の Store 版 2.2 系には非同梱／`karuzip-cli` 13 アクション）、元ファイルを変更しない**「画像とPDF」ワークベンチ**とファイル収集、および **CAB・ISO の作成（計 9 形式）**を追加し、LZH 日本語ファイル名（CP932）の自動読み取り修正と NAS / SMB 解凍安全性修正も統合しました。
+v3.1.0 では、**「澄・間（Sumi-Ma）」デザインへの刷新とダークモード「澄・夜」**（書庫内実画像サムネイル・スペースキー Quick Peek・Mac `__MACOSX` 既定非表示・暗号化完了時の敬語通知コピー）、**「3ステップ以内」の操作刷新**（ホームからの PDF／画像スマートドロップ直通・「画像とPDF」ワークベンチのワンクリック保存と証明写真プリセット・2ステップ圧縮・12文字パスワード自動生成）、および**実用 PDF 軽量化の互換性強化**（ICCBased RGB / Predictor 対応）を追加しました。韓国語正式対応、ローカル AI エージェント／CLI 連携（`karuzip-mcp` 21 ツール※現在公開中の Store 版 2.2 系には非同梱／`karuzip-cli` 13 アクション）、および CAB・ISO を含む 9 形式作成も引き続き利用できます。
 
 ## 特長
 
